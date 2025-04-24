@@ -195,20 +195,20 @@ class Game {
         for (let i = 0; i < 5; i++) {
             let x = Math.random() * (canvasWidth - 32);
             let y = Math.random() * (canvasHeight - 32);
-            this.actors.push(new GoldCoin(new Vec(x, y), 32, 32, "yellow", 8));
+            this.actors.push(new GoldCoin(new Vec(x, y), 32, 32, 8));
         }
 
         for (let i = 0; i < 5; i++) {
             let x = Math.random() * (canvasWidth - 32);
             let y = Math.random() * (canvasHeight - 32);
-            this.actors.push(new SilverCoin(new Vec(x, y), 32, 32, "gray", 8));
+            this.actors.push(new SilverCoin(new Vec(x, y), 32, 32, 8));
         }
 
-        // this.actors.push(new GoldCoin(new Vec(200, 200), 32, 32, "yellow", 8);
-        // this.actors.push(new GoldCoin(new Vec(400, 300), 32, 32, "yellow", 8);
+        // this.actors.push(new GoldCoin(new Vec(200, 200), 32, 32, 8);
+        // this.actors.push(new GoldCoin(new Vec(400, 300), 32, 32, 8);
 
-        // this.actors.push(new SilverCoin(new Vec(300, 400), 32, 32, "gray", 8);
-        // this.actors.push(new SilverCoin(new Vec(600, 250), 32, 32, "gray", 8);
+        // this.actors.push(new SilverCoin(new Vec(300, 400), 32, 32, 8);
+        // this.actors.push(new SilverCoin(new Vec(600, 250), 32, 32, 8);
 
     }
 
