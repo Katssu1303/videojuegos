@@ -10,7 +10,15 @@ Práctica de conceptos de uso de sprites y animación para juegos 2D
 
 ## Objetivo
 
+Recolectar las monedas: Al momento de que el personaje colisiona con las monedas, la moneda desaparece. Las monedas se generan aleatoriamente a lo largo del mapa.
+
 ## Instrucciones
+
+Usa las teclas de la sección de controles para moverte en dirección a las monedas y así colisionar contra ellas
 
 ## Controles
 
+ * W: Dirigirse hacia arriba
+ * S: Dirigirse hacia abajo
+ * A: Dirigirse hacia la izquierda
+ * D: Dirigirse hacia la derecha
