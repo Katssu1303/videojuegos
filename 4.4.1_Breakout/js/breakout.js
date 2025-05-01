@@ -18,6 +18,38 @@ let game;
 
 //CLASES PARA EL JUEGO
 //Pelota
+class Ball extends GameObject{
+    constructor(position, width, height, color){
+        //Llamar al constructor de la clase padre
+        super(position, width, height, color, "ball");
+        //Regresarla al centro
+        this.reset();
+    }
+
+    update(deltaTime){
+        //Cambia la velocidad dependiendo la velocidad -> d = v * t
+        this.position = this.position.plus(this.velocity.times(deltaTime));
+    }
+
+    initVelocity() {
+        //Define un angulo que vaya hacia abajo o lados de manera random
+        const angle = Math.random() * Math.PI / 2 + Math.PI / 4;
+        //Obtiene la direccion ****
+        this.velocity = new Vec(Math.cos(angle), Math.sin(angle)).times(initialSpeed);
+        //Le da una direccion random derecha o izquierda
+        this.velocity.x *= Math.random() > 0.5 ? 1 : -1;
+        this.inPlay = true;
+    }
+
+    reset() {
+        //Posiscion -> centro
+        this.position = new Vec(canvasWidth / 2, canvasHeight / 2);
+        //Velocidad = 0 -> no se mueve
+        this.velocity = new Vec(0, 0);
+        //No se mueve hasta presionar la barra
+        this.inPlay = false;
+    }
+}
 
 //Paddle
 
