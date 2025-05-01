@@ -52,6 +52,26 @@ class Ball extends GameObject{
 }
 
 //Paddle
+class Paddle extends GameObject{
+    constructor(position, width, height, color) {
+        //Llamar al constructor de la clase padre
+        super(position, width, height, color, "paddle");
+        //Velocidad = 0 -> no se mueve
+        this.velocity = new Vec(0, 0);
+    }
+
+    update(deltaTime){
+        //Cambia la velocidad dependiendo la velocidad -> d = v * t
+        this.position = this.position.plus(this.velocity.times(deltaTime));
+
+        //No deja que la paleta se salga del canvas (ni derecha ni izquierda por eso eje x)
+        if (this.position.x < 0) {
+            this.position.x = 0;
+        } else if (this.position.x + this.width > canvasWidth) {
+            this.position.x = canvasWidth - this.width;
+        }
+    }
+}
 
 //Bloques
 
