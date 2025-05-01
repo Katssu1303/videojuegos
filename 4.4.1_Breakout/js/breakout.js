@@ -430,17 +430,19 @@ class Game{
 }
 
 //Funcion main
-// Get a reference to the object with id 'canvas' in the page
-const canvas = document.getElementById('canvas');
-// Resize the element
-canvas.width = canvasWidth;
-canvas.height = canvasHeight;
-// Get the context for drawing in 2D
-ctx = canvas.getContext('2d');
+function main(){
+    // Get a reference to the object with id 'canvas' in the page
+    const canvas = document.getElementById('canvas');
+    // Resize the element
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+    // Get the context for drawing in 2D
+    ctx = canvas.getContext('2d');
 
-game = new Game(canvasWidth, canvasHeight);
+    game = new Game(canvasWidth, canvasHeight);
 
-drawScene(0);
+    drawScene(0);
+}
 
 //Funcion drawScene
 function drawScene(newTime) {
