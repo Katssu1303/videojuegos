@@ -74,6 +74,21 @@ class Paddle extends GameObject{
 }
 
 //Bloques
+class Block extends GameObject {
+    constructor(position, width, height, color) {
+        //Llamar al constructor de la clase padre
+        super(position, width, height, color, "block");
+        //Empiezan completos
+        this.destroyed = false;
+    }
+
+    //Los bloques se dibujan solo si no estan destruidos (destroyed == false)
+    draw(ctx) {
+        if (!this.destroyed) {
+            super.draw(ctx);
+        }
+    }
+}
 
 //Game
 
